@@ -19,12 +19,27 @@ Route::get('/', function () {
 
 //Route::get('/home', 'HomeController')->name('home');
 
-//Servicios
-Route::resource('servicios', 'ServicioController');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Servicios
+Route::resource('servicios', 'ServicioController');
+
 //Dispositivos
 Route::resource('dispositivos', 'DispositivoController');
+
+//Componentes
+Route::resource('componentes', 'ComponenteController');
+
+//Tipos de servicio
+Route::resource('tiposServicios', 'TipoServicioController');
+
+//Tecnicos
+Route::resource('tecnicos', 'TecnicoController');
+
+//Propietarios
+Route::resource('propietarios', 'PropietarioController');
+
+//Servicios
+Route::resource('servicios', 'ServicioController');

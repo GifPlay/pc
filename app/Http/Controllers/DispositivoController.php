@@ -12,7 +12,7 @@ class DispositivoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $dispositivos = Dispositivo::select('*');
 
@@ -22,7 +22,7 @@ class DispositivoController extends Controller
             $dispositivos = $dispositivos->where('nombreDispositivo', 'like', '%' . $request->search . '%');
         }
 
-        $dispositivos = $dispositivos->paginate($limit)->appends($request->all());
+        $dispositivos=$dispositivos->paginate($limit)->appends($request->all());
 
         return view("dispositivos.index", compact('dispositivos'));
     }
@@ -53,6 +53,15 @@ class DispositivoController extends Controller
             ->with('message', 'El registro se guardo correctamente');
     }
 
+    public function createUpdateDispositivo(Request $request, $dispositivo)
+    {
+        $dispositivo->idDispositivo = $request->idDispositivo;
+        $dispositivo->nombreDispositivo = $request->nombreDispositivo;
+
+        $dispositivo->save();
+        return $dispositivo;
+    }
+
     /**
      * Display the specified resource.
      *
@@ -62,7 +71,7 @@ class DispositivoController extends Controller
     public function show($dispositivo)
     {
         $dispositivo = Dispositivo::where('idDispositivo', $dispositivo)->firstOrFail();
-        return view('dispositivo.show', compact('dispositivo'));
+        return view('dispositivos.show', compact('dispositivo'));
     }
 
     /**
@@ -74,7 +83,7 @@ class DispositivoController extends Controller
     public function edit($dispositivo)
     {
         $dispositivo = Dispositivo::where('idDispositivo', $dispositivo)->firstOrFail();
-        return view('dispositivo.edit', compact('dispositivo'));
+        return view('dispositivos.edit', compact('dispositivo'));
     }
 
     /**
@@ -88,10 +97,10 @@ class DispositivoController extends Controller
     {
 
         $dispositivo = Dispositivo::where('idDispositivo', $dispositivo)->firstOrFail();
-        $dispositivo = $this->createUpdatecolonia($request, $dispositivo);
+        $dispositivo = $this->createUpdateDispositivo($request, $dispositivo);
 
         return redirect()
-            ->route('dispositivos.show', $dispositivo)
+            ->route('dispositivos.index', $dispositivo)
             ->with('message', 'El registro se ha actualizado correctamente');
     }
 
@@ -109,15 +118,4 @@ class DispositivoController extends Controller
             ->route('dispositivos.index')
             ->with('message', 'Se ha eliminador el registro correctamente');
     }
-
-
-    public function createUpdateDispositivo(Request $request, $dispositivo)
-    {
-
-        $dispositivo->nombreDispositivo = $request->nombreDispositivo;
-
-        $dispositivo->save();
-        return $dispositivo;
-    }
-
 }

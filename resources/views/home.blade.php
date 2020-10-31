@@ -36,7 +36,7 @@
 
 
                             <div class="col-md-4">
-                                <a href="{{ 'home' }}">
+                                <a href="{{ 'propietarios' }}">
                                     <div class="card-counter danger">
                                         <i class="fas fa-user-tie"></i>
                                         <span class="count-numbers">599</span>
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <a href="{{ 'home' }}">
+                                <a href="{{ 'tecnicos' }}">
                                     <div class="card-counter success">
                                         <i class="fas fa-id-card"></i>
                                         <span class="count-numbers">6875</span>
@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <a href="{{ 'home' }}">
+                                <a href="{{ 'componentes' }}">
                                     <div class="card-counter naranja">
                                         <i class="fas fa-memory"></i>
                                         <span class="count-numbers">35</span>

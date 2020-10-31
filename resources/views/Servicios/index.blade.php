@@ -29,25 +29,23 @@
                         <div class="row">
 
                             <div class="col-md-6">
-                                <a href="{{ 'home' }}">
-                                    <div class="card-counter success">
-                                        <i class="fas fa-business-time"></i>
-                                        <span class="count-numbers">12</span>
-                                        <span class="count-name">Equipos en reparación</span>
 
-                                    </div>
-                                </a>
+                                <div class="card-counter success">
+                                    <i class="fas fa-business-time"></i>
+                                    <span class="count-numbers">12</span>
+                                    <span class="count-name">Equipos en reparación</span>
+
+                                </div>
+
                             </div>
 
 
                             <div class="col-md-6">
-                                <a href="{{ 'home' }}">
-                                    <div class="card-counter primary">
-                                        <i class="fas fa-calendar-check"></i>
-                                        <span class="count-numbers">599</span>
-                                        <span class="count-name">Equipos para entrega</span>
-                                    </div>
-                                </a>
+                                <div class="card-counter primary">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span class="count-numbers">599</span>
+                                    <span class="count-name">Equipos para entrega</span>
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -91,8 +89,52 @@
                                     <th scope="col">Acciones</th>
                                 </tr>
                                 </thead>
-
-
+                                <tbody>
+                                @foreach($servicios as $servicio)
+                                    <tr>
+                                        <td>
+                                            {{ $servicio->idPropietario }}
+                                        </td>
+                                        <td>
+                                            {{ $servicio->nombre }}  {{ $servicio->apellidoPaterno }}  {{ $servicio->apellidoMaterno }}
+                                        </td>
+                                        <td>
+                                            {{ $servicio->email }}
+                                        </td>php
+                                        <td>
+                                            {{ $servicio->telefono }}
+                                        </td>
+                                        <td>
+                                            {{ $servicio->tipo }}
+                                        </td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Acciones">
+                                                <div class="btn-group" role="group" aria-label="Acciones">
+                                                    <a href="{{ route('propietarios.show', $propietario->idPropietario) }}"
+                                                       class="btn btn-info btn-sm">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                    <a href="{{ route('propietarios.edit', $propietario->idPropietario)}}"
+                                                       class="btn btn-primary btn-sm">
+                                                        <i class="fa fa-edit"></i>
+                                                    </a>
+                                                    <button type="submit" class="btn btn-danger btn-sm"
+                                                            form="delete_{{$propietario->idPropietario}}"
+                                                            onclick="return confirm('¿Estas seguro que deseas eliminar el item?')">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                    <form
+                                                        action="{{route('propietarios.destroy', $propietario->idPropietario)}}"
+                                                        id="delete_{{$propietario->idPropietario}}"
+                                                        method="post" enctype="multipart/form-data" hidden>
+                                                        @csrf
+                                                        @method('DELETE')
+                                                    </form>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
                             </table>
                         </div>
 
@@ -103,4 +145,19 @@
             </div>
         </div>
 
+        @endsection
+
+        @section('scripts')
+            <script type="text/javascript">
+                $('#limit').on('change', function () {
+                    window.location.href = '{{ route( "propietarios.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
+                })
+
+                $('#search').on('keyup', function (e) {
+                    if (e.keyCode == 13) {
+                        window.location.href = '{{ route("propietarios.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
+                    }
+                })
+            </script>
 @endsection
+
