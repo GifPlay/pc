@@ -20,6 +20,7 @@ class Servicio extends Model
         'fechaRegistro',
         'observaciones',
         'color',
-        'accesorios'
+        'accesorios',
+        'estado'
     ];
 }

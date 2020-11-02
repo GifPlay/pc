@@ -13,7 +13,7 @@
                                 <h5> Técnicos </h5>
                             </div>
                             <div class="col-md-2">
-                                <a class="btn btn-info btn-block active" href="{{ route('tecnicos.create') }}">
+                                <a class="btn btn-info btn-block active" href="{{ route('tecnicos.create') }}" >
                                     <i class="fa fa-plus"></i>
                                     Agregar
                                 </a>
@@ -129,6 +129,7 @@
 
 @section('scripts')
     <script type="text/javascript">
+
         $('#limit').on('change', function () {
             window.location.href = '{{ route( "tecnicos.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
         })

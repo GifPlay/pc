@@ -14,7 +14,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                <a href="{{ route('servicios.create') }}" class="btn btn-info btn-block active">Agregar
+                                <a href="{{ route('servicios.create') }}" class="btn btn-success btn-block active">Agregar
                                     <i class="fa fa-plus"></i>
                                 </a>
                             </div>
@@ -28,25 +28,48 @@
                         <!-- Cards -->
                         <div class="row">
 
-                            <div class="col-md-6">
-
-                                <div class="card-counter success">
-                                    <i class="fas fa-business-time"></i>
-                                    <span class="count-numbers">12</span>
-                                    <span class="count-name">Equipos en reparación</span>
-
+                            <div class="col-md-3">
+                                <div class="card-counter es1">
+                                    <i class="fas fa-hourglass-start"></i>
+                                    @foreach($reparaciones as $reparacion)
+                                        <span class="count-numbers">{{ $reparacion }}</span>
+                                    @endforeach
+                                    <span class="count-name">En reparación</span>
                                 </div>
+                            </div>
 
+                            <div class="col-md-3">
+                                <div class="card-counter es2">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    @foreach($esperas as $espera)
+                                        <span class="count-numbers">{{ $espera }}</span>
+                                    @endforeach
+                                    <span class="count-name">En espera</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card-counter es3">
+                                    <i class="fas fa-hourglass-end"></i>
+                                    @foreach($entregas as $entrega)
+                                        <span class="count-numbers">{{ $entrega }}</span>
+                                    @endforeach
+                                    <span class="count-name">Para entrega</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card-counter morado">
+                                    <i class="far fa-hourglass"></i>
+                                    @foreach($entregados as $entregado)
+                                        <span class="count-numbers">{{ $entregado }}</span>
+                                    @endforeach
+                                    <span class="count-name">Entregados</span>
+                                </div>
                             </div>
 
 
-                            <div class="col-md-6">
-                                <div class="card-counter primary">
-                                    <i class="fas fa-calendar-check"></i>
-                                    <span class="count-numbers">599</span>
-                                    <span class="count-name">Equipos para entrega</span>
-                                </div>
-                            </div>
+
                         </div>
                         <br>
 
@@ -83,53 +106,51 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Código</th>
+                                    <th scope="col">Folio</th>
                                     <th scope="col">Propietario</th>
                                     <th scope="col">Equipo</th>
-                                    <th scope="col">Acciones</th>
+                                    <th scope="col">Ingresó</th>
+                                    <th scope="col">Servicio</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col-1">Acciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($servicios as $servicio)
                                     <tr>
                                         <td>
-                                            {{ $servicio->idPropietario }}
+                                            {{ $servicio->idServicio }}
                                         </td>
                                         <td>
-                                            {{ $servicio->nombre }}  {{ $servicio->apellidoPaterno }}  {{ $servicio->apellidoMaterno }}
+                                            {{ $servicio->folio }}
                                         </td>
                                         <td>
-                                            {{ $servicio->email }}
-                                        </td>php
-                                        <td>
-                                            {{ $servicio->telefono }}
+                                            {{ $servicio->propietario }}
                                         </td>
                                         <td>
-                                            {{ $servicio->tipo }}
+                                            {{ $servicio->nombreDispositivo }}, {{ $servicio->color }}, {{ $servicio->marca }} - {{ $servicio->modelo }}
+                                        </td>
+
+                                        <td>
+                                            {{ $servicio->fechaRegistro }}
+                                        </td>
+                                        <td>
+                                            {{ $servicio->nombreServicio }}
+                                        </td>
+                                        <td>
+                                            {{ $servicio->estado }}
                                         </td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">
                                                 <div class="btn-group" role="group" aria-label="Acciones">
-                                                    <a href="{{ route('propietarios.show', $propietario->idPropietario) }}"
-                                                       class="btn btn-info btn-sm">
+                                                    <a href="{{ route('servicios.show', $servicio->idServicio) }}"
+                                                       class="btn btn-warning btn-sm">
                                                         <i class="fa fa-eye"></i>
                                                     </a>
-                                                    <a href="{{ route('propietarios.edit', $propietario->idPropietario)}}"
+                                                    <a href="{{ route('servicios.edit', $servicio->idServicio)}}"
                                                        class="btn btn-primary btn-sm">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
-                                                    <button type="submit" class="btn btn-danger btn-sm"
-                                                            form="delete_{{$propietario->idPropietario}}"
-                                                            onclick="return confirm('¿Estas seguro que deseas eliminar el item?')">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                    <form
-                                                        action="{{route('propietarios.destroy', $propietario->idPropietario)}}"
-                                                        id="delete_{{$propietario->idPropietario}}"
-                                                        method="post" enctype="multipart/form-data" hidden>
-                                                        @csrf
-                                                        @method('DELETE')
-                                                    </form>
                                                 </div>
                                         </td>
                                     </tr>
@@ -150,14 +171,15 @@
         @section('scripts')
             <script type="text/javascript">
                 $('#limit').on('change', function () {
-                    window.location.href = '{{ route( "propietarios.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
+                    window.location.href = '{{ route( "servicios.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
                 })
 
                 $('#search').on('keyup', function (e) {
                     if (e.keyCode == 13) {
-                        window.location.href = '{{ route("propietarios.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
+                        window.location.href = '{{ route("servicios.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
                     }
                 })
             </script>
+
 @endsection
 

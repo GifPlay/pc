@@ -47,6 +47,27 @@
     background-color: #FF711D;
     color: #FFF;
 }
+.card-counter.esperar {
+    background-color: #999999;
+    color: #FFF;
+}
+.card-counter.es1 {
+    background-color: #3694FF;
+    color: #FFF;
+}
+.card-counter.es2 {
+    background-color: #2B76CC;
+    color: #FFF;
+}
+.card-counter.es3 {
+    background-color: #1B4A80;
+    color: #FFF;
+}
+.card-counter.es4 {
+    background-color: #03738C;
+    color: #FFF;
+}
+
 
 
 .card-counter i {

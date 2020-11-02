@@ -1,29 +1,50 @@
 @extends('layouts.app')
+@include('partials.navbar')
 @section('content')
-    @include('partials.navbar')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
 
-    <div class="card mt-9">
-        <div class="card-header d-inline-flex">
-            <b>FORMULARIO SERVICIOS</b>
-            <a href="{{ route('servicios.index') }}" class="btn btn-primary ml-auto">
-                <i class="fa fa-arrow-left"> Volver</i></a>
-        </div>
-        <div class="card-body">
-            <form action="{{ route('servicios.store') }}" method="POST" enctype="multipart/from-data" id="create">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h5> Formulario Servicios </h5>
+                            </div>
 
-                <div class="row">
-                    <div clas="col-12">
-                        <div class="form-group">
-                @include('servicios.partials.form')
+                            <div class="col-md-2">
+                                <a href="{{ route('servicios.index') }}" class="btn btn-primary ml-auto">
+                                    <i class="fa fa-arrow-left"> Volver</i></a>
+                            </div>
+                        </div>
 
-            </form>
-        </div>
-        <div class="card-footer">
-            <div>
-                <button class="btn btn-primary" form="create">
-                    <i class="fa fa-plus"></i>
-                    Crear
-                </button>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form action="{{ route('servicios.store') }}" method="POST" enctype="multipart/from-data"
+                              id="create">
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        @include('Servicios.partials.form')
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-primary" form="create">
+                                <i class="fa fa-plus"></i>
+                                Crear
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

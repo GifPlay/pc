@@ -17,7 +17,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link active light" href="{{ route('servicios.index') }}"><i class="fas fa-tools"></i> Servicios</a>
+                <a class="nav-link active light" id="cutService" href="{{ route('servicios.index') }}"><i class="fas fa-tools"></i> Servicios</a>
             </li>
 
             <li class="nav-item">
@@ -77,6 +77,7 @@
                         <a class="dropdown-item" href="{{ route('register') }}">
                             Nuevo Usuario
                         </a>
+                        <div role="separator" class="dropdown-divider"></div>
 
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
@@ -95,4 +96,5 @@
         </ul>
     </div>
 </nav>
+
 

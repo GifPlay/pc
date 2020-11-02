@@ -10,7 +10,7 @@ class ProcedimientoServicio extends Model
     public static function insertServicio($datos=[]){
         $result = false;
         if (count($datos)>0) {
-            $result = \DB::statement('CALL insertServicio(?,?,?,?,?,?,?,?,?,?,?,?,?)',$datos);
+            $result = \DB::statement('CALL insertServicio(?,?,?,?,?,?,?,?,?,?,?,?,?,?)',$datos);
         }
         return $result;
     }
@@ -18,7 +18,7 @@ class ProcedimientoServicio extends Model
     public static function editServicio($datos=[]){
         $result = false;
         if (count($datos)>0) {
-            $result = \DB::statement('CALL editServicio(?,?,?,?,?,?,?,?,?,?,?,?,?)',$datos);
+            $result = \DB::statement('CALL editServicio(?,?,?,?,?,?,?,?,?,?,?,?)',$datos);
         }
         return $result;
     }

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth\login');
 });
 
 //Route::get('/home', 'HomeController')->name('home');
@@ -43,3 +43,7 @@ Route::resource('propietarios', 'PropietarioController');
 
 //Servicios
 Route::resource('servicios', 'ServicioController');
+
+//Graficas
+Route::get('graficas.graficarServicios', 'GraficaController@graficarServicios')->name('servicios.grafica');
+Route::get('graficas.graficarTecnicos', 'GraficaController@graficarTecnicos')->name('tecnicos.grafica');

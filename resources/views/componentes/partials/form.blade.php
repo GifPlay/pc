@@ -10,6 +10,6 @@
 
     <label for="">Descripción:</label>
     <input type="text" class="form-control" name="descripcion"
-           value="{{ (isset($componente))?$componente->descripcion:old('descripcion')}}"  maxlength="50" required>
+           value="{{ (isset($componente))?$componente->descripcion:old('descripcion')}}"  maxlength="254" required>
 </div>
 

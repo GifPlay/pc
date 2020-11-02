@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Entities\Componente;
+use App\Entities\Dispositivo;
+use App\Entities\Propietario;
+use App\Entities\Servicio;
 use App\Entities\Tecnico;
 use App\Entities\TipoServicio;
 use App\Entities\VistaServicio;
 use App\Entities\ProcedimientoServicio;
+
 
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\facade;
@@ -36,12 +40,18 @@ class ServicioController extends Controller
                 ->orWhere('fechaRegistro','like', '%'.$request->search.'%')
                 ->orWhere('observaciones','like', '%'.$request->search.'%')
                 ->orWhere('color','like', '%'.$request->search.'%')
-                ->orWhere('accesorio','like', '%'.$request->search.'%');
+                ->orWhere('accesorio','like', '%'.$request->search.'%')
+                ->orWhere('estado','like', '%'.$request->search.'%');
         }
 
         $servicios=$servicios->paginate($limit)->appends($request->all());
+        $reparaciones = $this->serviciosReparación();
+        $entregas = $this->serviciosEntrega();
+        $esperas = $this->serviciosEspera();
+        $entregados = $this->serviciosEntregados();
 
-        return view("servicios.index", compact('servicios'));
+
+        return view("servicios.index", compact('servicios','reparaciones','entregas','esperas','entregados'));
     }
 
     /**
@@ -54,8 +64,17 @@ class ServicioController extends Controller
         $componentes = Componente::select('*')->get();
         $tipoServicios = TipoServicio::select('*')->get();
         $tecnicos = Tecnico::select('*')->get();
+        $propietarios = Propietario::all();
+        $dispositivos = Dispositivo::select('*')->get();
+        $numero = Servicio::select(\DB::raw("COUNT(*) AS 'count'"))
+            ->whereYear('fechaRegistro', date('Y'))
+            ->groupBy(\DB::raw("Month(fechaRegistro)"))->pluck('count');
 
-        return view('vistaServicios.create', compact('componentes','tipoServicios','tecnicos'));
+
+
+
+
+        return view('servicios.create', compact('componentes','tipoServicios','tecnicos','propietarios','dispositivos','servicio'));
     }
 
     /**
@@ -103,8 +122,11 @@ class ServicioController extends Controller
         $componentes = Componente::select('*')->get();
         $tipoServicios = TipoServicio::select('*')->get();
         $tecnicos = Tecnico::select('*')->get();
-        $servicio = ProcedimientoServicio::where('idServicio', $servicio)->firstOrFail();
-        return view('servicios.edit', compact('componentes','tipoServicios','tecnicos','servicio'));
+        $propietarios = Propietario::select('*')->get();
+        $dispositivos = Dispositivo::select('*')->get();
+        $valores = Servicio::where('idServicio', $servicio)->firstOrFail();
+        $servicio = VistaServicio::where('idServicio', $servicio)->firstOrFail();
+        return view('servicios.edit', compact('componentes','tipoServicios','tecnicos','servicio','propietarios','dispositivos','valores'));
 
     }
 
@@ -117,7 +139,7 @@ class ServicioController extends Controller
      */
     public function update(Request $request, $servicio)
     {
-        $servicio = ProcedimientoServicio::where('idServicio', $servicio)->firstOrFail();
+        //$servicio = ProcedimientoServicio::where('idServicio', $servicio)->firstOrFail();
 
         $datos = array_values($request->except(['_method','_token']));
 
@@ -152,6 +174,35 @@ class ServicioController extends Controller
 
         //linea para visualizar
         return $pdf->stream();
+    }
+
+    public function serviciosReparación(){
+
+        $servicios = VistaServicio::select(\DB::raw("COUNT(*) AS 'count'"))
+            ->where('estado', 'like', '%' . 'reparacion' . '%')
+            ->pluck('count');
+        return ($servicios);
+    }
+    public function serviciosEntrega(){
+
+        $servicios = VistaServicio::select(\DB::raw("COUNT(*) AS 'count'"))
+            ->where('estado', 'like', '%' . 'entregar' . '%')
+            ->pluck('count');
+        return ($servicios);
+    }
+    public function serviciosEspera(){
+
+        $servicios = VistaServicio::select(\DB::raw("COUNT(*) AS 'count'"))
+            ->where('estado', 'like', '%' . 'espera' . '%')
+            ->pluck('count');
+        return ($servicios);
+    }
+    public function serviciosEntregados(){
+
+        $servicios = VistaServicio::select(\DB::raw("COUNT(*) AS 'count'"))
+            ->where('estado', 'like', '%' . 'entregado' . '%')
+            ->pluck('count');
+        return ($servicios);
     }
 
 

@@ -14,8 +14,8 @@
                                 <img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid mb-3 d-none d-md-block">
 
                                 <h1>Inicia Sesión</h1>
-                                <p class="font-italic text-muted mb-0">Solo el administrador del taller puede iniciar
-                                    sesión.</p>
+                                <p class="font-italic text-muted mb-0">Solo usuarios con cuenta pueden ingresar.</p>
+                                <p>Solicita el acceso a un administrador.</p>
 
                             </div>
                             <form method="POST" action="{{ route('login') }}">

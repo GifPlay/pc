@@ -26,7 +26,7 @@
                               id="create">
 
                             <div class="row">
-                                <div clas="col-12">
+                                <div class="col-12">
                                     <div class="form-group">
                                         @include('propietarios.partials.form')
                                     </div>

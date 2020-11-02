@@ -27,8 +27,10 @@
                                 <a href="{{ 'servicios' }}">
                                     <div class="card-counter primary">
                                         <i class="fas fa-tools"></i>
-                                        <span class="count-numbers">12</span>
+                                        @foreach($servicios as $servicio)
+                                        <span class="count-numbers">{{ $servicio }}</span>
                                         <span class="count-name">Servicios</span>
+                                        @endforeach
 
                                     </div>
                                 </a>
@@ -39,8 +41,10 @@
                                 <a href="{{ 'propietarios' }}">
                                     <div class="card-counter danger">
                                         <i class="fas fa-user-tie"></i>
-                                        <span class="count-numbers">599</span>
+                                        @foreach($propietarios as $propietario)
+                                        <span class="count-numbers">{{ $propietario }}</span>
                                         <span class="count-name">Clientes</span>
+                                        @endforeach
                                     </div>
                                 </a>
                             </div>
@@ -49,8 +53,10 @@
                                 <a href="{{ 'tecnicos' }}">
                                     <div class="card-counter success">
                                         <i class="fas fa-id-card"></i>
-                                        <span class="count-numbers">6875</span>
+                                        @foreach($tecnicos as $tecnico)
+                                            <span class="count-numbers">{{ $tecnico }}</span>
                                         <span class="count-name">Técnicos</span>
+                                        @endforeach
                                     </div>
                                 </a>
                             </div>
@@ -59,8 +65,10 @@
                                 <a href="{{ 'componentes' }}">
                                     <div class="card-counter naranja">
                                         <i class="fas fa-memory"></i>
-                                        <span class="count-numbers">35</span>
+                                        @foreach($componentes as $componente)
+                                            <span class="count-numbers">{{ $componente }}</span>
                                         <span class="count-name">Componentes</span>
+                                        @endforeach
                                     </div>
                                 </a>
                             </div>
@@ -70,8 +78,10 @@
                                 <a href="{{ 'home' }}">
                                     <div class="card-counter morado">
                                         <i class="fas fa-dollar-sign"></i>
-                                        <span class="count-numbers">12</span>
+                                        @foreach($ventas as $venta)
+                                            <span class="count-numbers">{{ $venta }}</span>
                                         <span class="count-name">Ventas</span>
+                                        @endforeach
                                     </div>
                                 </a>
                             </div>
@@ -80,7 +90,6 @@
                                 <a href="{{ 'home' }}">
                                     <div class="card-counter info">
                                         <i class="fas fa-clipboard-list"></i>
-                                        <span class="count-numbers">12</span>
                                         <span class="count-name">Reportes</span>
                                     </div>
                                 </a>
@@ -88,6 +97,28 @@
                         </div>
 
                         <!-- end Cards -->
+                            <br>
+                            <h2>Gráficas</h2>
+                            <br>
+                        <!-- graficas -->
+                            <div class="row">
+                                <div class="col-6">
+
+                                        <a href="{{ route('servicios.grafica') }}" class="btn btn-info btn-block active">Visualizar gráfica de servicios
+                                            <i class="fas fa-chart-line"></i>
+                                        </a>
+
+
+                                </div>
+                                <div class="col-6">
+
+                                    <a href="{{ route('tecnicos.grafica') }}" class="btn btn-info btn-block active">Visualizar gráfica de servicios por técnico
+                                        <i class="fas fa-chart-line"></i>
+                                    </a>
+
+
+                                </div>
+                            </div>
 
                     </div>
                 </div>

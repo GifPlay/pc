@@ -18,7 +18,7 @@
 
     <label for="">Teléfono:</label>
     <input type="text" class="form-control" name="_telefono"
-           value="{{ (isset($propietario))?$propietario->telefono:old('telefono')}}"   required>
+           value="{{ (isset($propietario))?$propietario->telefono:old('telefono')}}"  maxlength="10" required>
 
     <label for="">Tipo Teléfono:</label>
     <select class="form-control" name="_tipo" value="{{ (isset($propietario))?$propietario->tipo:old('tipo')}}" required>
