@@ -9,8 +9,14 @@
                     <div class="card-header">
 
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-md-7">
                                 <h5> Servicios </h5>
+                            </div>
+
+                            <div class="col-md-3">
+                                <a href="{{ route('servicios.pdf') }}" target="_blank" class="btn btn-primary btn-block active">Exportar Servicios
+                                    <i class="fa fa-print"></i>
+                                </a>
                             </div>
 
                             <div class="col-md-2">
@@ -18,6 +24,7 @@
                                     <i class="fa fa-plus"></i>
                                 </a>
                             </div>
+
                         </div>
 
                     </div>
@@ -29,12 +36,14 @@
                         <div class="row">
 
                             <div class="col-md-3">
+
                                 <div class="card-counter es1">
                                     <i class="fas fa-hourglass-start"></i>
                                     @foreach($reparaciones as $reparacion)
                                         <span class="count-numbers">{{ $reparacion }}</span>
                                     @endforeach
                                     <span class="count-name">En reparación</span>
+
                                 </div>
                             </div>
 
@@ -67,7 +76,6 @@
                                     <span class="count-name">Entregados</span>
                                 </div>
                             </div>
-
 
 
                         </div>
@@ -128,7 +136,8 @@
                                             {{ $servicio->propietario }}
                                         </td>
                                         <td>
-                                            {{ $servicio->nombreDispositivo }}, {{ $servicio->color }}, {{ $servicio->marca }} - {{ $servicio->modelo }}
+                                            {{ $servicio->nombreDispositivo }}, {{ $servicio->color }}
+                                            , {{ $servicio->marca }} - {{ $servicio->modelo }}
                                         </td>
 
                                         <td>
@@ -144,8 +153,8 @@
                                             <div class="btn-group" role="group" aria-label="Acciones">
                                                 <div class="btn-group" role="group" aria-label="Acciones">
                                                     <a href="{{ route('servicios.show', $servicio->idServicio) }}"
-                                                       class="btn btn-warning btn-sm">
-                                                        <i class="fa fa-eye"></i>
+                                                       class="btn btn-warning btn-sm" target="_blank">
+                                                        <i class="fa fa-print"></i>
                                                     </a>
                                                     <a href="{{ route('servicios.edit', $servicio->idServicio)}}"
                                                        class="btn btn-primary btn-sm">
@@ -163,7 +172,14 @@
                     </div>
                 </div>
                 <!-- end Cards -->
+                <div class="card-footer">
+                    @if($servicios->total() > 10)
+                        {{$servicios->links()}}
+                    @endif
+                </div>
             </div>
+
+        </div>
         </div>
 
         @endsection

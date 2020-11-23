@@ -4,11 +4,11 @@ namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VistaServicio extends Model
+class VistaVentas extends Model
 {
     public $timestamps = false;
     protected $primaryKey = 'idServicio';
-    protected $table = 'editarservicio';
+    protected $table = 'reporteventas';
     protected $fillable = [
         'propietario',
         'telefono',
@@ -28,6 +28,4 @@ class VistaServicio extends Model
         'folio',
         'formaPago'
     ];
-
-
 }

@@ -40,10 +40,23 @@ Route::resource('tecnicos', 'TecnicoController');
 
 //Propietarios
 Route::resource('propietarios', 'PropietarioController');
+Route::get('propietarios-pdf','PropietarioController@exportPDF')->name('propietarios.pdf');
 
 //Servicios
 Route::resource('servicios', 'ServicioController');
+Route::get('Servicios.print', 'ServicioController@print')->name('servicio-print');
+//PDF
+Route::get('servicios-pdf','ServicioController@exportServicios')->name('servicios.pdf');
+
+//Ventas
+Route::resource('ventas', 'VentasController');
+Route::get('ventas-pdf','VentasController@exportVentas')->name('ventas.pdf');
 
 //Graficas
 Route::get('graficas.graficarServicios', 'GraficaController@graficarServicios')->name('servicios.grafica');
 Route::get('graficas.graficarTecnicos', 'GraficaController@graficarTecnicos')->name('tecnicos.grafica');
+
+//Ventas
+Route::resource('reportes', 'ReportesController');
+
+

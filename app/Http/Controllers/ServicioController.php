@@ -8,12 +8,15 @@ use App\Entities\Propietario;
 use App\Entities\Servicio;
 use App\Entities\Tecnico;
 use App\Entities\TipoServicio;
+use App\Entities\VistaPropietario;
 use App\Entities\VistaServicio;
 use App\Entities\ProcedimientoServicio;
 
 
+use App\Entities\VistaVentas;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\facade;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\DB;
 
 
 class ServicioController extends Controller
@@ -70,10 +73,6 @@ class ServicioController extends Controller
             ->whereYear('fechaRegistro', date('Y'))
             ->groupBy(\DB::raw("Month(fechaRegistro)"))->pluck('count');
 
-
-
-
-
         return view('servicios.create', compact('componentes','tipoServicios','tecnicos','propietarios','dispositivos','servicio'));
     }
 
@@ -93,8 +92,9 @@ class ServicioController extends Controller
             return redirect()->back();
         }
 
+
         return redirect()
-            ->route('servicios.index')
+            ->route('servicio.pdf')
             ->with('message', 'El registro se guardo correctamente');
     }
 
@@ -108,7 +108,8 @@ class ServicioController extends Controller
     public function show($servicio)
     {
         $servicio = VistaServicio::where('idServicio', $servicio)->firstOrFail();
-        return view('servicios.show', compact('servicio'));
+
+        return view('servicios.print', compact('servicio'));
     }
 
     /**
@@ -165,17 +166,6 @@ class ServicioController extends Controller
     }
 
 
-    public function exportPDF(){
-        $servicios = VistaServicio::get();
-        $pdf = \PDF::loadView('servicios.exportPDF2', compact('servicios'));
-
-        //linea para la horientacion
-        //$pdf->setPage('letter','landscape');
-
-        //linea para visualizar
-        return $pdf->stream();
-    }
-
     public function serviciosReparación(){
 
         $servicios = VistaServicio::select(\DB::raw("COUNT(*) AS 'count'"))
@@ -205,5 +195,15 @@ class ServicioController extends Controller
         return ($servicios);
     }
 
+    public function exportServicios(){
+        $servicios = VistaServicio::get('*');
 
+        $pdf = \PDF::loadView('Servicios.exportReparacion', compact('servicios'));
+
+        //linea para la horientacion
+        //$pdf->setPage('letter','landscape');
+
+        //linea para visualizar
+        return $pdf->stream();
+    }
 }

@@ -9,8 +9,13 @@
                     <div class="card-header">
 
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-md-7">
                                 <h5> Propietarios </h5>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="{{ route('propietarios.pdf') }}" target="_blank" class="btn btn-primary btn-block active">Exportar Clientes
+                                    <i class="fa fa-print"></i>
+                                </a>
                             </div>
                             <div class="col-md-2">
                                 <a class="btn btn-info btn-block active" href="{{ route('propietarios.create') }}">

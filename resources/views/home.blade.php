@@ -75,7 +75,7 @@
 
 
                             <div class="col-md-4">
-                                <a href="{{ 'home' }}">
+                                <a href="{{ 'ventas' }}">
                                     <div class="card-counter morado">
                                         <i class="fas fa-dollar-sign"></i>
                                         @foreach($ventas as $venta)
@@ -87,7 +87,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <a href="{{ 'home' }}">
+                                <a href="{{ 'reportes' }}">
                                     <div class="card-counter info">
                                         <i class="fas fa-clipboard-list"></i>
                                         <span class="count-name">Reportes</span>

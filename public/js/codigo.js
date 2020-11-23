@@ -20,5 +20,13 @@
     shortcut.add("Ctrl+ALT+V",function() {
         window.location.href = 'ventas'
     });
-
+    shortcut.add("Ctrl+ALT+D",function() {
+        window.location.href = 'dispositivos'
+    });
+    shortcut.add("Ctrl+ALT+Z",function() {
+        window.location.href = 'tiposServicios'
+    });
+    shortcut.add("Ctrl+ALT+N",function() {
+        window.location.href = 'register'
+    });
 
