@@ -36,7 +36,7 @@
                 <a class="nav-link active light" href="{{ route('ventas.index') }}"><i class="fas fa-dollar-sign"></i> Ventas</a>
             </li>
         </ul>
-        
+
 
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto">
