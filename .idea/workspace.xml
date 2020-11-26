@@ -2,8 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16a271e8-bea0-4285-a16a-278ae31a8233" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/colors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/application_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/bg_gradinat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/bottom_layer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/icon3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/loaders/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pc-banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/scr4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/ser2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/slide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/top_layer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/highlight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.mousewheel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/scrollbot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/scrollreveal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/wow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +229,7 @@
       <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\resources\views" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.app">
+  <component name="RunManager">
     <configuration name="app" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/app" />
       <method v="2" />
@@ -176,11 +238,6 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.app" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -211,6 +268,9 @@
       <workItem from="1606005684059" duration="8832000" />
       <workItem from="1606066868931" duration="20519000" />
       <workItem from="1606158000915" duration="634000" />
+      <workItem from="1606339482990" duration="15953000" />
+      <workItem from="1606365702307" duration="3488000" />
+      <workItem from="1606370472079" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1604124933364</created>
@@ -250,9 +310,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="251" key="#CLI_Interpreters/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1605124949527" />
-    <state x="414" y="175" width="1092" height="842" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605124964005">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="331" y="145" width="1092" height="842" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606339584258">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="331" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1606339584258" />
     <state x="414" y="175" width="1092" height="842" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1605124964005" />
     <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603993984250">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -295,9 +356,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="525" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1604026689989" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606094284179">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="442" y="210" key="Vcs.Push.Dialog.v2" timestamp="1606370536920">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="442" y="210" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606370536920" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606094284179" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606094246866">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -313,9 +375,10 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606068787591" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604274854924" />
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1604275637060">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="498" y="187" width="672" height="678" key="search.everywhere.popup" timestamp="1606341795512">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="498" y="187" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606341795512" />
     <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1604275637060" />
   </component>
 </project>
