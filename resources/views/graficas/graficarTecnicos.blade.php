@@ -71,7 +71,7 @@
 
         yAxis:{
             title:{
-                text: 'Servicios'
+                text: 'servicios'
             }
         },
 
@@ -89,11 +89,11 @@
 
         series: [{
             type: 'column',
-            name: 'Servicios asignados',
+            name: 'servicios asignados',
             data: tecnicos,
         },{
             type: 'column',
-            name: 'Servicios Entregados',
+            name: 'servicios Entregados',
             data: entregados,
         }
 

@@ -73,7 +73,7 @@ class ServicioController extends Controller
             ->whereYear('fechaRegistro', date('Y'))
             ->groupBy(\DB::raw("Month(fechaRegistro)"))->pluck('count');
 
-        return view('servicios.create', compact('componentes','tipoServicios','tecnicos','propietarios','dispositivos','servicio'));
+        return view('servicios.create', compact('componentes','tipoServicios','tecnicos','propietarios','dispositivos'));
     }
 
     /**
@@ -198,7 +198,7 @@ class ServicioController extends Controller
     public function exportServicios(){
         $servicios = VistaServicio::get('*');
 
-        $pdf = \PDF::loadView('Servicios.exportReparacion', compact('servicios'));
+        $pdf = \PDF::loadView('servicios.exportReparacion', compact('servicios'));
 
         //linea para la horientacion
         //$pdf->setPage('letter','landscape');

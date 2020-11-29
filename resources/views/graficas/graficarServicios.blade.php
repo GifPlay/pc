@@ -50,7 +50,7 @@
     chart = new Highcharts.chart('grafica', {
 
         title: {
-            text: 'Servicios registrados en el sistema'
+            text: 'servicios registrados en el sistema'
         },
 
         subtitle: {
@@ -64,7 +64,7 @@
 
         yAxis: {
             title: {
-                text: 'Servicios'
+                text: 'servicios'
             }
         },
 
@@ -81,23 +81,23 @@
         },
 
         series: [{
-            name: 'Servicios totales',
+            name: 'servicios totales',
             data: servicios
         },
             {
-                name: 'Servicios en reparación',
+                name: 'servicios en reparación',
                 data: reparacion
             },
             {
-                name: 'Servicios en espera',
+                name: 'servicios en espera',
                 data: espera
             },
             {
-                name: 'Servicios para entrega',
+                name: 'servicios para entrega',
                 data: terminado
             },
             {
-                name: 'Servicios Entregados',
+                name: 'servicios Entregados',
                 data: entregado
             }
         ],

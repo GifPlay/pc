@@ -27,7 +27,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        @include('Servicios.partials.form1')
+                                        @include('servicios.partials.form1')
                                     </div>
                                 </div>
                             </div>

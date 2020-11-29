@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Entities\ProcedimientoTecnico;
 use App\Entities\Tecnico;
-use App\Entities\vistaTecnico;
+use App\Entities\VistaTecnico;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\facade;
 

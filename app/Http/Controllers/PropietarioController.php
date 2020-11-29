@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Entities\ProcedimientoPropietario;
 use App\Entities\VistaPropietario;
-use App\Propietario;
+use App\Entities\Propietario;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\facade;
 

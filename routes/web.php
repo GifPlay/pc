@@ -24,10 +24,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Servicios
+//servicios
 Route::resource('servicios', 'ServicioController');
 
-//Dispositivos
+//dispositivos
 Route::resource('dispositivos', 'DispositivoController');
 
 //Componentes
@@ -43,9 +43,9 @@ Route::resource('tecnicos', 'TecnicoController');
 Route::resource('propietarios', 'PropietarioController');
 Route::get('propietarios-pdf','PropietarioController@exportPDF')->name('propietarios.pdf');
 
-//Servicios
+//servicios
 Route::resource('servicios', 'ServicioController');
-Route::get('Servicios.print', 'ServicioController@print')->name('servicio-print');
+//Route::get('servicios.print', 'ServicioController@print')->name('servicio-print');
 //PDF
 Route::get('servicios-pdf','ServicioController@exportServicios')->name('servicios.pdf');
 

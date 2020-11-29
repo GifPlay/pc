@@ -1,70 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a271e8-bea0-4285-a16a-278ae31a8233" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/owl.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/Flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/application_screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/bg_gradinat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/bottom_layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/loaders/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/pc-banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/scr4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/ser2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slide1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/top_layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/highlight.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.mousewheel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scrollbot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scrollreveal.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/wow.js" afterDir="false" />
+    <list default="true" id="16a271e8-bea0-4285-a16a-278ae31a8233" name="Default Changelist" comment="git push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropietarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropietarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServicioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServicioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TecnicoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TecnicoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/Logo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/Logo5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/exportReparacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/exportReparacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/partials/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/partials/form1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/partials/form1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Servicios/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/servicios/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/graficas/graficarServicios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/graficas/graficarServicios.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/graficas/graficarTecnicos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/graficas/graficarTecnicos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,17 +176,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\resources\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\public\js" />
       <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\app\Entities" />
       <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\public\img" />
       <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\public" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Gif\Documents\Laravel\PcContainer\resources\views" />
-    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="app" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/app" />
       <method v="2" />
@@ -271,6 +228,12 @@
       <workItem from="1606339482990" duration="15953000" />
       <workItem from="1606365702307" duration="3488000" />
       <workItem from="1606370472079" duration="109000" />
+      <workItem from="1606408046407" duration="733000" />
+      <workItem from="1606416107242" duration="600000" />
+      <workItem from="1606424401442" duration="2669000" />
+      <workItem from="1606510718748" duration="56000" />
+      <workItem from="1606512137868" duration="5618000" />
+      <workItem from="1606615530769" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1604124933364</created>
@@ -298,6 +261,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -327,22 +293,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606089858032" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1606094270391">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1606520204348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606094270391" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606520204348" />
     <state x="629" y="298" key="EditFileWatcherDialog" timestamp="1603771621169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="298" key="EditFileWatcherDialog/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1603771621169" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606081884405">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2444" y="193" key="FileChooserDialogImpl" timestamp="1606510771927">
+      <screen x="1920" y="0" width="1360" height="728" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606081884405" />
-    <state x="833" y="418" key="Github.ShareDialog" timestamp="1604124999546">
+    <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1606510771927" />
+    <state x="833" y="418" key="Github.ShareDialog" timestamp="1606514311417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="833" y="418" key="Github.ShareDialog/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1604124999546" />
+    <state x="833" y="418" key="Github.ShareDialog/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1606514311417" />
     <state x="833" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603944100378" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604018847572">
       <screen x="0" y="0" width="1920" height="1040" />
